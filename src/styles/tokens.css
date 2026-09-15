@@ -1,0 +1,160 @@
+@layer tokens {
+  :root {
+    /* ---- Primitives: raw values, never consumed by components ---- */
+    --gray-000: #ffffff;
+    --gray-050: #f2f3f5;
+    --gray-100: #ecedf0;
+    --gray-200: #d9dce1;
+    --gray-500: #666c78;
+    --gray-600: #5a5f6a;
+    --gray-700: #6b7280;
+    --gray-900: #14161a;
+
+    --ink-100: #f2f3f5;
+    --ink-300: #a6acb8;
+    --ink-350: #9aa1ad;
+    --ink-400: #8a909b;
+    --ink-700: #2a2e36;
+    --ink-800: #1f2229;
+    --ink-850: #101216;
+    --ink-900: #17191e;
+    --ink-950: #0d0e11;
+
+    --iris-300: #8e86f0;
+    --iris-500: #5a4fe0;
+
+    --graphite-ink: #1b1e24;
+    --graphite-soft: #e6e8ec;
+    --saffron-deep: #9e5e0c;
+    --saffron-bright: #e3a34a;
+    --verdant-deep: #157f52;
+    --verdant-bright: #3dbb7e;
+
+    /* ---- Typography ---- */
+    --font-sans:
+      system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    --font-size-display: 40px;
+    --font-size-title: 28px;
+    --font-size-heading: 20px;
+    --font-size-body: 17px;
+    --font-size-label: 13px;
+    --font-size-caption: 13px;
+
+    --line-height-none: 1;
+    --line-height-tight: 1.1;
+    --line-height-snug: 1.2;
+    --line-height-normal: 1.45;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+
+    --letter-spacing-tight: -0.02em;
+    --letter-spacing-snug: -0.01em;
+    --letter-spacing-normal: 0em;
+    --letter-spacing-wide: 0.04em;
+
+    /* ---- Spacing: 4px base ---- */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-7: 32px;
+    --space-8: 40px;
+    --space-10: 64px;
+
+    /* ---- Shape ---- */
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-full: 999px;
+
+    /* ---- Motion ---- */
+    --duration-fast: 150ms;
+    --duration-base: 220ms;
+    --duration-slow: 320ms;
+
+    --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+    --ease-enter: cubic-bezier(0.22, 1, 0.36, 1);
+
+    /* ---- Semantic colors: light theme ---- */
+    --color-bg: var(--gray-050);
+    --color-surface: var(--gray-000);
+    --color-surface-elevated: var(--gray-000);
+    --color-surface-sunken: var(--gray-100);
+    --color-border: var(--gray-200);
+
+    --color-text: var(--gray-900);
+    --color-text-secondary: var(--gray-600);
+    --color-text-muted: var(--gray-500);
+
+    --color-accent: var(--iris-500);
+    --color-accent-soft: rgb(90 79 224 / 10%);
+    --color-on-accent: #ffffff;
+
+    --color-x: var(--graphite-ink);
+    --color-o: var(--saffron-deep);
+    --color-win: var(--verdant-deep);
+    --color-win-soft: rgb(21 127 82 / 12%);
+    --color-draw: var(--gray-700);
+
+    --color-focus: var(--iris-500);
+
+    /* ---- Semantic elevation: light theme ---- */
+    --shadow-1: 0 1px 2px rgb(16 18 24 / 6%), 0 0 0 1px rgb(16 18 24 / 4%);
+    --shadow-2: 0 4px 12px rgb(16 18 24 / 8%), 0 1px 2px rgb(16 18 24 / 6%);
+    --shadow-3: 0 12px 32px rgb(16 18 24 / 14%), 0 2px 6px rgb(16 18 24 / 8%);
+
+    /* ---- Layout ---- */
+    --layout-content-max: 520px;
+    --layout-board-max: 460px;
+    --layout-board-min: 280px;
+    --layout-gutter: var(--space-4);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg: var(--ink-950);
+      --color-surface: var(--ink-900);
+      --color-surface-elevated: var(--ink-800);
+      --color-surface-sunken: var(--ink-850);
+      --color-border: var(--ink-700);
+
+      --color-text: var(--ink-100);
+      --color-text-secondary: var(--ink-300);
+      --color-text-muted: var(--ink-400);
+
+      --color-accent: var(--iris-300);
+      --color-accent-soft: rgb(142 134 240 / 16%);
+      --color-on-accent: var(--ink-950);
+
+      --color-x: var(--graphite-soft);
+      --color-o: var(--saffron-bright);
+      --color-win: var(--verdant-bright);
+      --color-win-soft: rgb(61 187 126 / 16%);
+      --color-draw: var(--ink-350);
+
+      --color-focus: var(--iris-300);
+
+      --shadow-1: 0 1px 2px rgb(0 0 0 / 40%), 0 0 0 1px rgb(255 255 255 / 4%);
+      --shadow-2: 0 4px 12px rgb(0 0 0 / 48%), 0 1px 2px rgb(0 0 0 / 40%);
+      --shadow-3: 0 12px 32px rgb(0 0 0 / 56%), 0 2px 6px rgb(0 0 0 / 44%);
+    }
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --layout-gutter: var(--space-6);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --layout-gutter: var(--space-7);
+    }
+  }
+}
